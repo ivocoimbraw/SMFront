@@ -5,6 +5,8 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "strict": true,
+    "types": ["node"],
+    "skipDefaultLibCheck": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -22,7 +24,13 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": [
+        "src/app/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/@angular/material/prebuilt-themes/azure-blue.css';
+
+
+/* 
+$dark-theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$azure-palette,
+  ),
+  typography: (
+    brand-family: 'Comic Sans',
+    bold-weight: 900
+  ),
+  density: (
+    scale: -1
+  )
+));
+
+$light-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$violet-palette,
+  ),
+));
+
+html {
+    @include mat.all-component-themes($dark-theme);
+    @media (prefers-color-scheme: light) {
+        @include mat.all-component-themes($dark-theme);
+    }
+} */
+
+html, body { 
+    height: 100%; 
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
