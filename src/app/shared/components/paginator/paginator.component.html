@@ -1,0 +1,10 @@
+@let pageValues = page();
+@if(pageValues) {
+    <mat-paginator [length]="pageValues.totalElements"
+              [pageSize]="pageValues.size"
+              [pageIndex]="pageValues.number"
+              [showFirstLastButtons]="true"
+              (page)="onPageChange($event)">
+    </mat-paginator>
+
+}

@@ -1,0 +1,12 @@
+table {
+  width: 100%;
+}
+
+.hover-effect {
+  transition: filter 0.3s ease; /* Transición suave */
+}
+
+.hover-effect:hover {
+  filter: brightness(85%); /* Reduce el brillo al 85% para oscurecer */
+  cursor: pointer;
+}

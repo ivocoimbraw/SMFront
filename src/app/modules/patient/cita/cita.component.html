@@ -1,0 +1,26 @@
+<h2><p>Cita reservada correctamente</p></h2>
+@let cita = cita$ | async;
+@if (cita) {
+    <div class="section">
+        <div class="section-title">Información de la Cita</div>
+        <div class="item"><span class="label">ID de Cita:</span> {{ cita.id }}</div>
+        <div class="item"><span class="label">Fecha:</span> {{ cita.fecha[2] }}/{{ cita.fecha[1] }}/{{ cita.fecha[0] }}</div>
+        <div class="item"><span class="label">Estado:</span> {{ cita.estado }}</div>
+    </div>
+  
+    <!-- Horario de la cita -->
+    <div class="section">
+        <div class="section-title">Horario</div>
+        <div class="item"><span class="label">Hora de Inicio:</span> {{ cita.horario.horaInicio[0] }}:{{ cita.horario.horaInicio[1] }}</div>
+        <div class="item"><span class="label">Hora de Fin:</span> {{ cita.horario.horaFin[0] }}:{{ cita.horario.horaFin[1] }}</div>
+        <div class="item"><span class="label">Día:</span> {{ cita.horario.dia }}</div>
+    </div>
+  
+    <!-- Información del Doctor -->
+    <div class="section">
+        <div class="section-title">Información del Doctor</div>
+        <div class="item"><span class="label">Nombre:</span> {{ cita.horario.doctor.name }} {{ cita.horario.doctor.lastName }}</div>
+        <div class="item"><span class="label">Fecha de Nacimiento:</span> {{ cita.horario.doctor.dateOfBirth[2] }}/{{ cita.horario.doctor.dateOfBirth[1] }}/{{ cita.horario.doctor.dateOfBirth[0] }}</div>
+        <div class="item"><span class="label">Especialidad:</span> {{ cita.horario.especialidad.name }}</div>
+    </div>  
+}

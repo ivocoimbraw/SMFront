@@ -1,0 +1,43 @@
+<div class="total">
+    @let citas = cita$ | async;
+    <div class="search-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Id Number</mat-label>
+          <input matInput placeholder="Enter Id Number" [(ngModel)]="idNumber" />
+        </mat-form-field>
+      
+        <button mat-raised-button color="primary" (click)="search()">
+          Search
+        </button>
+      </div>
+    @if (citas && citas.length > 0 && !citaSelected) {
+        <p>
+            <app-table [data]="citas" [columns]="column" (elementSelected)="onSelected($event)"></app-table>
+        </p>
+    }@else if(citaSelected){
+      {{ citaSelected | json }}
+
+      <div class="upload-container">
+        <h2>Subir Documento</h2>
+        <div class="input-container">
+          <label for="fileInput" class="file-label">
+            <span>Seleccionar Archivo</span>
+            <input
+              type="file"
+              id="fileInput"
+              (change)="onFileSelected($event)"
+              class="file-input"
+            />
+          </label>
+        </div>
+        <button (click)="uploadAndSave()" class="upload-button">Subir Documento</button>
+      
+        @if (uploadMessage) {
+          <div class="upload-message">
+            {{ uploadMessage }}
+          </div>
+        }
+      </div>
+      
+    }
+</div>

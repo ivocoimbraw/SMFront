@@ -1,0 +1,11 @@
+<div class="table">
+    @let doctors = doctors$ | async;
+    
+    @if (doctors) {
+        <app-table [columns]="columns" [data]="doctors" (elementSelected)="onElementSelected($event)"></app-table>
+        <app-paginator [page]="pageInfo" (pageChange)="onPageInfoChange($event)"></app-paginator>
+    }@else {
+        <ng-container > No data found.</ng-container>
+    }
+    
+</div>

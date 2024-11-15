@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-profile',
   standalone: true,
   imports: [MatIconModule,MatSidenavModule, MatToolbarModule,
     MatFormFieldModule, 
@@ -18,11 +18,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule, 
     MatListModule,
     RouterModule],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss',
+  templateUrl: './profile.component.html',
+  styleUrl: './profile.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DashboardComponent {
-
+export class ProfileComponent {
   router = inject(Router);
 }

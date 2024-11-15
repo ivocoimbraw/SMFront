@@ -1,0 +1,15 @@
+.dashboard-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-container {
+  width: auto;
+  height: 100%;
+  border: 1px solid #555;
+}
+
+mat-drawer-content {
+  padding: 12px;
+}

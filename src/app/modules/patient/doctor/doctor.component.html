@@ -1,0 +1,8 @@
+<p>doctor works!</p>
+
+@let doctors = doctors$ | async;
+
+@if (doctors && doctors.length > 0) {
+    <app-table [columns]="columns" [data]="doctors" (elementSelected)="onElementSelected($event)"></app-table>
+    <app-paginator [page]="pageInfo" (pageChange)="onPageChange($event)"></app-paginator>
+}

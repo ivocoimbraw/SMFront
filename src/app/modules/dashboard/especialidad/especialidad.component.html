@@ -1,0 +1,8 @@
+<p>especialidad works!</p>
+
+@let especialidades = especialidades$ | async;
+
+@if (especialidades) {
+    <app-table [columns]="columns" [data]="especialidades" (elementSelected)="onElementSelected($event)"></app-table>
+    <app-paginator [page]="pageInfo" (pageChange)="onPageChange($event)"></app-paginator>
+}
